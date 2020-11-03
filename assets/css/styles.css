@@ -1,0 +1,452 @@
+/* .navbar {   
+    opacity: 0.9;    
+} */
+
+@font-face {
+    font-family: 'HelveticaNeueLTStd-Roman';
+    src: url('../fonts/HelveticaNeueLTStd-Roman.otf');       
+}
+
+@font-face {
+    font-family: 'BaskervilleMTStd-Regular';
+    src: url('../fonts/BaskervilleMTStd-Regular.otf');       
+}
+
+@font-face {
+    font-family: 'BaskervilleMTStd-Italic';
+    src: url('../fonts/BaskervilleMTStd-Italic.otf');       
+}
+
+#menu{
+    position: absolute;
+  
+ }
+
+.navbar-dark .navbar-nav .nav-link {
+    font-family: 'HelveticaNeueLTStd-Roman';
+    color: white;
+    letter-spacing: 2pt;
+    font-size: 20px;
+}
+
+#header{
+    background-image: url("../images/header_01.jpg") ;   
+    height: 800px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#positivo{
+    background-image: url("../images/header_01.jpg") ;   
+    height: 800px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#negativo{
+    background-image: url("../images/header_01.jpg") ;   
+    height: 800px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#center-div{
+    position: absolute;
+    top: 210px;
+    left: 102px;
+    /* height: 437px;
+    width: 564px; */
+    background-color: #181818;
+    opacity: 0.9;    
+    text-align: left;
+    padding: 0;
+}
+
+#center-div #btn-bg{
+    background-color: #f8f8f8;
+    color: black;
+    margin: 0;
+    padding: 0;
+    width: auto;
+}
+
+#left {    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    width: 50%;
+    min-height: 95px;
+    background-color: #00ADA4;   
+}
+
+#left2 {    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    width: 15%;
+    min-height: 65px;
+    background-color: #00ADA4;   
+}
+
+  #right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    width: 50%;
+    min-height: 95px;
+    background-color:#FFAF00;
+  }
+
+  #right3 {    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    width: 15%;
+    min-height: 65px;
+    background-color: #FFAF00;  
+}
+
+  #right2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    width: 50%;
+    min-height: 95px;    
+  }
+
+  .volver {
+    background-color: transparent; 
+    border: solid white 2px; 
+    font-size: 20px;     
+  }
+ 
+
+
+#texto-modal{
+    color: white;
+    font-family: 'HelveticaNeueLTStd-Roman';     
+    margin-top: 20px;
+}
+
+#texto-modal #question {
+    font-size: 18px;
+    padding: 20px;
+}
+
+#texto-modal > h3 {
+    font-size: 48px;
+    padding: 20px;
+}
+
+#texto-modal > p {
+    padding: 20px;
+}
+
+#texto-modal > h4 {
+    padding: 20px;
+}
+
+.fa-thumbs-up:before {
+    color: white;
+}
+
+.dislike{
+-webkit-transform: rotate(-180deg);
+ -moz-transform: rotate(-180deg);
+ -ms-transform: rotate(-180deg);
+ transform: rotate(-180deg);
+}
+
+#barrainferior1{
+    background-color: #00ADA4;
+    position:absolute; /*El div será ubicado con relación a la pantalla*/
+    left:0px; /*A la derecha deje un espacio de 0px*/
+    right:0px; /*A la izquierda deje un espacio de 0px*/
+    bottom:0px; /*Abajo deje un espacio de 0px*/
+    height:60px; /*alto del div*/
+    z-index:0;
+    opacity: 0.9;
+    width: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#barrainferior2{
+    background-color:#FFAF00;
+    position:absolute; /*El div será ubicado con relación a la pantalla*/
+    
+    right:0px; /*A la izquierda deje un espacio de 0px*/
+    bottom:0px; /*Abajo deje un espacio de 0px*/
+    height:60px; /*alto del div*/
+    z-index:0;
+    opacity: 0.9;
+    width: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.porcentaje{
+    font-size: 22px;
+    color: white;
+    padding: 2px;
+}
+
+.text-box{
+    background-color: #ECECEC;
+    font-size: 18px;
+    margin: 35px 0px 35px 0px;
+    padding: 10px;
+}
+
+#left1 {     
+  padding: 25px;   
+  width: 30%;
+  font-style: inherit;
+}
+
+#right1 {
+  padding: 25px;
+  width: 70%;   
+}
+
+.card{    
+    height: 550px;
+    color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card-title {   
+    font-size: 40px;
+    margin-left: 5px;
+}
+
+.lead{
+    font-size: 45px;
+}
+
+.superman{
+    background-image: url('../images/superman.jpg');
+    margin-bottom: 20px;
+}
+
+.thor{
+    background-image: url('../images/thor.jpg');
+    margin-bottom: 20px;
+}
+
+.batman{
+    background-image: url('../images/batman.jpg');
+    margin-bottom: 20px;
+}
+
+.spiderman{
+    background-image: url('../images/spiderman.jpg');
+    margin-bottom: 20px;
+}
+
+.card-body{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 300px;
+    padding: 15px 21px 0px 29px;
+}
+
+.card-body > p {
+    margin-bottom: 2rem;
+    margin-left: 33px;
+}
+
+.card-body > a {
+    text-decoration: none;
+    margin-left: 33px;
+}
+
+.btn-card{
+    border: white solid 2px;    
+    font-weight: 400;
+    font-size: 20px;
+    color: #ffffff;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    padding-left: 50px;
+    padding-right: 50px;      
+}
+
+.btn-card:hover{
+    background-color: white;
+    border: black solid 2px;
+    color: #181818;
+}
+
+#barrainferior1-card{
+    background-color: #00ADA4;
+    position:absolute; /*El div será ubicado con relación a la pantalla*/
+    left:0px; /*A la derecha deje un espacio de 0px*/
+    width: 45%;
+    margin-left: 15px;
+    bottom:0px; /*Abajo deje un espacio de 0px*/
+    height:60px; /*alto del div*/
+    z-index:0;
+    
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#barrainferior2-card{
+    background-color:#FFAF00;
+    position:absolute; /*El div será ubicado con relación a la pantalla*/
+    width: 45%;
+    margin-right: 15px;
+    right:0px; /*A la izquierda deje un espacio de 0px*/
+    bottom:0px; /*Abajo deje un espacio de 0px*/
+    height:60px; /*alto del div*/
+    z-index:0;
+    
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.like{
+    background-color: #00ADA4;
+   /*El div será ubicado con relación a la pantalla*/
+   width: 56px;
+   margin-left: -15px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+#title{
+    color: white;
+    font-size: 35px;
+    font-family: 'BaskervilleMTStd-Italic';
+    letter-spacing: 1pt;
+}
+
+.title-p-1{
+    font-family: 'BaskervilleMTStd-Italic';
+    letter-spacing: 1pt;
+    text-align: left;
+}
+
+
+
+.p1{
+    text-align: justify;
+    margin-top: 3%;
+    font-family: 'HelveticaNeueLTStd-Roman';
+    font-size: 16px;
+}
+
+.p2{
+    font-family: 'BaskervilleMTStd-Regular';
+    font-size: 16px;
+}
+
+#sticky-footer {
+    flex-shrink: none;
+    background-color: #0e0e0e;
+    text-align: center;
+}
+
+hr{
+    border-style: dotted 2px solid;    
+}
+
+
+.footer-enlace{
+    text-decoration: none;
+    color: rgb(99, 97, 97);
+}
+
+.footer-enlace:hover{
+    text-decoration: none;
+    color: black;
+}
+
+.iconos-redes{
+    margin: 0px 15px 0px 15px;    
+}
+
+.fa-facebook-f:before {   
+    color: rgb(32, 32, 32);
+}
+
+.fa-twitter:before {
+    color: rgb(32, 32, 32);
+}
+
+.img-2{
+    width: 5%;
+    display:inline-block;  
+    text-align: center; 
+}
+
+@media (min-width: 992px){
+    .navbar-expand-lg .navbar-collapse {      
+        margin-right: 30px;
+    }
+    #menu{      
+        margin-left: 85px;
+     }
+}
+
+/*Oculta texto al lado del boton ver detalle*/
+@media (max-width: 420px) {    
+    .text-time{
+        display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    #center-div{     
+        left: 0px;             
+    } 
+    .logo{
+        height: 50px;
+    }
+    .lupa{
+        display: none;
+    }
+}
+
+@media (max-width: 900px) {
+    #menu{
+        text-align: center;
+    }
+    #navbarSupportedContent > ul > li > a{ 
+        color: black;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 360px) {
+    .footer{
+        width: 30%;
+        
+    }
+    #center-div{        
+        min-height: 90vh;        
+    }   
+  }

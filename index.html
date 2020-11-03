@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <title>Heroes</title>    
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+  </head>
+  <body>
+
+    <!-- Menu Principal -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top transparent" id="menu">
+      <a class="navbar-brand" href="#">
+        <img src="assets/images/logo.png" class="img-fluid logo" alt="">          
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item px-3">
+            <a class="nav-link">Heroes Anteriores</a>
+          </li>
+          <li class="nav-item px-3">
+            <a class="nav-link">¿Como funciona?</a>
+          </li>
+          <li >
+              <a class="nav-link">Iniciar sesión</a>
+          </li>
+          <li class="nav-item px-5">  
+              <a class="nav-link">
+                  <img src="assets/images/icon_search.png" class="img-fluid lupa" alt="">
+              </a>
+          </li>   
+        </ul>
+      </div>
+    </nav>
+
+
+    <!-- Imagen header votos -->
+    <div class="position-relative overflow-hidden py-5 text-center bg-light" id="header">
+      <div class="col-md-4" id="center-div">   
+        <div id="texto-modal">
+          <small id="question">Dinos que opinas sobre</small>
+          <h3>Ironman?</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos expedita voluptatibus vitae esse! Possimus iste nesciunt vitae minus, officia omnis laudantium quaerat ex. Illum, sit. Sit ut doloribus aperiam deserunt.</p>
+          <h4>¿Cuál es tu voto?</h4>
+          <div id="left">
+            <button type="button" id="like" onclick="agregarLike()" style="background: transparent; border: none;">
+              <i class="fas fa-thumbs-up fa-3x"></i>
+            </button>
+            <!-- <a href="#" id="like" onclick="contador()"></a> -->
+          </div>
+          <div id="right">
+            <button type="button" id="like2" onclick="agregarDislike()" style="background: transparent; border: none;">
+              <i class="dislike fas fa-thumbs-up fa-3x"></i>
+            </button>
+            <!-- <a href=""><i class="dislike fas fa-thumbs-up fa-3x"></i></a> -->
+          </div>          
+        </div>
+      </div>     
+      <div id="barrainferior1">
+        <i class="fas fa-thumbs-up fa-2x" id="like-porcentaje"></i><p class="porcentaje" id="porcentaje"></p>
+      </div>      
+      <div id="barrainferior2">
+        <p class="porcentaje" id="porcentaje2"></p><i class="dislike fas fa-thumbs-up fa-2x" id="dislike-porcentaje"></i>
+      </div>       
+    </div>
+
+        <!-- Voto Positivo -->
+        <div class="position-relative overflow-hidden py-5 text-center bg-light" id="positivo">
+          <div class="col-md-4" id="center-div">   
+            <div id="texto-modal">             
+              <h3>Marvel - <strong>Ironman</strong></h3>
+              <div id="left2">
+                <button type="button" id="like" style="background: transparent; border: none;">
+                  <i class="fas fa-thumbs-up fa-3x"></i>
+                </button>               
+              </div>
+              <div id="right2">
+                <p>Tu voto ha sido registrado</p>                               
+              </div>  
+
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos expedita voluptatibus vitae esse! Possimus</p>
+             
+              <div class="col text-center my-5">
+                <a href="#" onclick="votar()" class="btn btn-primary volver">Volver a votar</a>   
+              </div>   
+               
+            </div>
+          </div>    
+                
+        </div>
+
+         <!-- Voto Negativo -->
+         <div class="position-relative overflow-hidden py-5 text-center bg-light" id="negativo">
+          <div class="col-md-4" id="center-div">   
+            <div id="texto-modal">             
+              <h3>Marvel - <strong>Ironman</strong></h3>
+              <div id="right3">
+                <button type="button" id="like" style="background: transparent; border: none;">
+                  <i class="dislike fas fa-thumbs-up fa-3x"></i>
+                </button>               
+              </div>
+              <div id="right2">
+                <p>Tu voto ha sido registrado</p>                               
+              </div>  
+
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos expedita voluptatibus vitae esse! Possimus</p>
+             
+              <div class="col text-center my-5">
+                <a href="#" onclick="votar()" class="btn btn-primary volver">Volver a votar</a>   
+              </div>   
+               
+            </div>
+          </div>    
+                
+        </div>
+
+    <div class="container">
+
+      <div class="text-box">
+        <div class="row">
+          <div id="left1">
+            <h2>Lorem ipsum dolor 
+              sit amet</h2>             
+          </div>
+          <div id="right1">
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, laboriosam. Tempora atque incidunt aut hic reprehenderit, optio praesentium ab nulla ad officia dignissimos laudantium ullam deserunt quisquam, perferendis blanditiis distinctio?</p>
+          </div>
+        </div>
+      </div>
+       
+
+      
+        <h2 class="lead my-5">Super Héroes anteriores</h2>
+
+        <!-- Cards -->        
+        <div class="row ">
+          <div class="col-sm-6  my-3">
+            <div class="card superman">
+              <div class="card-body">
+                <div class="row">
+                 
+                  <div class="like">
+                    <i class="fas fa-thumbs-up fa-2x"></i>
+                  </div>
+                
+                  <h5 class="card-title">Superman</h5>
+              </div>
+                <p class="card-text">Vestibulum diam ante, porttitor a odio eget, rhoncus neque, Aenean eu velit libero.</p>
+                  <a href="#" class="btn-card ">Ver detalle</a>
+                  <span class="text-time float-right">1 mes atrás</span>
+              </div>
+            </div>
+            <div id="barrainferior1-card">
+              <i class="fas fa-thumbs-up fa-3x"></i><small class="porcentaje">88%</small>
+            </div>      
+            <div id="barrainferior2-card">
+              <small class="porcentaje">12%</small><i class="dislike fas fa-thumbs-up fa-3x"></i>
+            </div>  
+          </div>
+
+          <div class="col-sm-6 my-3">
+            <div class="card thor">
+              <div class="card-body">
+                <div class="row">
+                  <div class="like">
+                    <i class="fas fa-thumbs-up fa-2x"></i>
+                  </div>
+                  <h5 class="card-title">Thor</h5>
+                </div>
+               
+                <p class="card-text">Vestibulum diam ante, porttitor a odio eget, rhoncus neque, Aenean eu velit libero.</p>
+                <a href="#" class="btn-card">Ver detalle</a>
+                <span class="text-time float-right">1 mes atrás</span>
+              </div>
+            </div>
+            <div id="barrainferior1-card">
+              <i class="fas fa-thumbs-up fa-3x"></i><small class="porcentaje">88%</small>
+            </div>      
+            <div id="barrainferior2-card">
+              <small class="porcentaje">12%</small><i class="dislike fas fa-thumbs-up fa-3x"></i>
+            </div>  
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6  my-3">
+            <div class="card batman">
+              <div class="card-body">
+                <div class="row">
+                  <div class="like">
+                    <i class="fas fa-thumbs-up fa-2x"></i>
+                  </div>
+                  <h5 class="card-title">Batman</h5>
+                </div>
+                
+                <p class="card-text">Vestibulum diam ante, porttitor a odio eget, rhoncus neque, Aenean eu velit libero.</p>
+                <a href="#" class="btn-card">Ver detalle</a>
+                <span class="text-time float-right">2 meses atrás</span>
+              </div>
+            </div>
+            <div id="barrainferior1-card">
+              <i class="fas fa-thumbs-up fa-3x"></i><small class="porcentaje">88%</small>
+            </div>      
+            <div id="barrainferior2-card">
+              <small class="porcentaje">12%</small><i class="dislike fas fa-thumbs-up fa-3x"></i>
+            </div>  
+          </div>
+
+          <div class="col-sm-6  my-3">
+            <div class="card spiderman">
+              <div class="card-body">
+                <div class="row">
+                  <div class="like">
+                    <i class="fas fa-thumbs-up fa-2x"></i>
+                  </div>
+                  <h5 class="card-title">Spiderman</h5>
+                </div>                
+                <p class="card-text">Vestibulum diam ante, porttitor a odio eget, rhoncus neque, Aenean eu velit libero.</p>
+                <a href="#" class="btn-card">Ver detalle</a>
+                <span class="text-time float-right">3 meses atrás</span>                
+              </div>
+            </div>
+            <div id="barrainferior1-card">
+              <i class="fas fa-thumbs-up fa-3x"></i><small class="porcentaje">88%</small>
+            </div>      
+            <div id="barrainferior2-card">
+              <small class="porcentaje">12%</small><i class="dislike fas fa-thumbs-up fa-3x"></i>
+            </div>  
+          </div>
+        </div>
+
+        <hr>
+
+        <footer>
+
+          <div class="row justify-content-between">
+            <div class="col-8">
+             <ul class="list-inline">
+              <li class="list-inline-item"><a href="#" class="footer-enlace">Términos y condiciones</a></li>
+              <li class="list-inline-item"><a href="#" class="footer-enlace">Política de tratamiento de datos</a></li>
+              <li class="list-inline-item"><a href="#" class="footer-enlace">Contáctenos</a></li>
+            </ul>
+            </div>
+            <div class="iconos-redes">                         
+             <ul class="list-inline">  
+              <li class="list-inline-item">Síguenos</li>            
+              <li class="list-inline-item"><a href=""><i class="fab fa-facebook-f fa-2x"></i></a></li>
+              <li class="list-inline-item"><a href=""><i class="fab fa-twitter fa-2x"></i></a></li>
+            </ul>
+            </div>
+          </div>
+         
+            
+          
+          <div class="container text-center img-2 mx-0 px-0">
+           
+          </div> 
+        </footer>
+
+
+    </div>
+    
+
+
+
+ 
+
+</html>
+
+<script src="funciones.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
