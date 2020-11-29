@@ -1,155 +1,107 @@
-// Ocultar iconos y divs
-document.getElementById("like-porcentaje").style.display = 'none';
-document.getElementById("dislike-porcentaje").style.display = 'none';
-document.getElementById("positivo").style.display = 'none';
-document.getElementById("negativo").style.display = 'none';
+hideElements();
 
-if(localStorage.hasOwnProperty("superheroe")){
-    //Obtengo datos del localStorage
-    let superheroe = JSON.parse(localStorage.getItem("superheroe"));
-    let like = superheroe.likes;
-    let dislike = superheroe.dislikes;
+const setItemLocalStorage = (data) => localStorage.setItem("superheroe", JSON.stringify(data));
+const heroe = { nombre: "Ironman", likes: 0, dislikes: 0 };
+const dataLocalStorage = () => localStorage.hasOwnProperty("superheroe");
+const itemLocalStorage = () => JSON.parse(localStorage.getItem("superheroe"));
 
-    //Si los likes son menos de 10 ocultar icono de likes
-    if(like < 10){
-        document.getElementById("like-porcentaje").style.display = 'none';
-    } else if(dislike < 10) {
-        document.getElementById("dislike-porcentaje").style.display = 'none';
-    }else{
-        document.getElementById("like-porcentaje").style.display = 'block';
-        document.getElementById("dislike-porcentaje").style.display = 'block';
-    }
+if(dataLocalStorage()) {  
+  let superheroe = itemLocalStorage();
+  let like = superheroe.likes;
+  let dislike = superheroe.dislikes;
 
-    //Mostrar porcentaje y barra de progreso de los likes
-    document.getElementById("porcentaje").innerHTML = like+'%';
-    document.getElementById("barrainferior1").style.width = like+'%';
-
-    //Mostrar porcentaje y barra de progreso de los dislikes
-    document.getElementById("porcentaje2").innerHTML = dislike+'%';
-    document.getElementById("barrainferior2").style.width = dislike+'%';
+  showHideLikes(like);
+  showHideDislikes(dislike);
 }
 
-function votar(){
-    document.getElementById("header").style.display = 'block';
-    document.getElementById("positivo").style.display = 'none';    
-    document.getElementById("negativo").style.display = 'none';   
+function votar() {
+  document.getElementById("header").style.display = 'block';
+  document.getElementById("positivo").style.display = 'none';    
+  document.getElementById("negativo").style.display = 'none';   
+}
+
+function hideElements() {  
+  document.getElementById("like-porcentaje").style.display = 'none';
+  document.getElementById("dislike-porcentaje").style.display = 'none';
+  document.getElementById("positivo").style.display = 'none';
+  document.getElementById("negativo").style.display = 'none';
+}
+
+function showHideLikes(like) {     
+  if(like > 0) {
+    document.getElementById("porcentaje").innerHTML = like+'%';
+    document.getElementById("barrainferior1").style.width = like+'%';
+  }
+
+  if(like < 10) {
+    document.getElementById("like-porcentaje").style.display = 'none';
+  }else {
+      document.getElementById("like-porcentaje").style.display = 'block';      
+  }    
+}
+
+function showHideDislikes(dislike) {  
+  if(dislike > 0) {
+    document.getElementById("porcentaje2").innerHTML = dislike+'%';
+    document.getElementById("barrainferior2").style.width = dislike+'%';
+  }
+  
+  if(dislike < 10) {
+    document.getElementById("dislike-porcentaje").style.display = 'none';
+  }else {
+    document.getElementById("dislike-porcentaje").style.display = 'block';
+  }
 }
 
 function agregarLike() {
-
     document.getElementById("header").style.display = 'none';
     document.getElementById("negativo").style.display = 'none'; 
     document.getElementById("positivo").style.display = 'block';
 
-    //Comprueba si existe la superheroe en localStorage
-    if (!localStorage.hasOwnProperty("superheroe")) {
-      
-      //Estructura que tendra los datos que se guardaran en el localStorage
-      let heroe = { 
-          nombre: "Ironman",
-          likes: 0,
-          dislikes: 0
-      };
+    if(!dataLocalStorage()) { 
+      setItemLocalStorage(heroe);
 
-      //Guardamos los datos en el localStorage
-      localStorage.setItem("superheroe", JSON.stringify(heroe));
-  
-      //Obtenemos los datos del localStorage  
-      let dataHeroe = JSON.parse(localStorage.getItem("superheroe"));
-  
-      //Se modifican los likes
-      dataHeroe.likes = dataHeroe.likes + 1;
+      let item = itemLocalStorage();    
+      item.likes += 5;
+      let likes = item.likes;  
+     
+      setItemLocalStorage(item); 
+      showHideLikes(likes);
 
-      //Almacenamos los likes en una variable
-      let likes = dataHeroe.likes;
-  
-      //Se sobreescriben los datos
-      localStorage.setItem("superheroe", JSON.stringify(dataHeroe));      
+    }else {     
+      let dataHeroe = itemLocalStorage();      
+      dataHeroe.likes += 5;  
 
-      //Mostramos la barra de progreso y el porcentaje para los likes
-      document.getElementById("porcentaje").innerHTML = likes+'%';
-      document.getElementById("barrainferior1").style.width = likes+'%';
+      setItemLocalStorage(dataHeroe);
 
-    } else {
-      //Obtenemos los datos del localStorage
-      let dataHeroe = JSON.parse(localStorage.getItem("superheroe"));
-
-      //Se modifican los likes
-      dataHeroe.likes += 1;
-      
-      //Se sobreescriben los datos
-      localStorage.setItem("superheroe", JSON.stringify(dataHeroe));
-
-      //Almacenamos los likes en una variable
       let like = dataHeroe.likes;
-
-      if(like < 10){
-        document.getElementById("like-porcentaje").style.display = 'none';
-      }else{
-        document.getElementById("like-porcentaje").style.display = 'block';
-      }
-
-      document.getElementById("porcentaje").innerHTML = like+'%';
-      document.getElementById("barrainferior1").style.width = like+'%';
+      showHideLikes(like);      
     }
   }
 
-  function agregarDislike() {   
-      
+  function agregarDislike() {     
     document.getElementById("header").style.display = 'none';
     document.getElementById("negativo").style.display = 'block'; 
-    document.getElementById("positivo").style.display = 'none';
+    document.getElementById("positivo").style.display = 'none';    
     
-    //Comprueba si existe la superheroe en localStorage
-    if (!localStorage.hasOwnProperty("superheroe")) {
+    if(!dataLocalStorage()) {  
+      setItemLocalStorage(heroe); 
       
-      //Estructura que tendra los datos que se guardaran en el localStorage
-      let heroe = { 
-          nombre: "Ironman",
-          likes: 0,
-          dislikes: 0
-      };
-
-      //Guardamos los datos en el localStorage
-      localStorage.setItem("superheroe", JSON.stringify(heroe));
-  
-      //Obtenemos los datos del localStorage  
-      let dataHeroe = JSON.parse(localStorage.getItem("superheroe"));
-  
-      //Se modifican los dislikes
-      dataHeroe.dislikes += 1;
-
-      //Almacenamos los dlikes en una variable
-      let dislikes = dataHeroe.dislikes;
-  
-      //Se sobreescriben los datos
-      localStorage.setItem("superheroe", JSON.stringify(dataHeroe));      
-
-      //Mostramos la barra de progreso y el porcentaje para los likes
-      document.getElementById("porcentaje2").innerHTML = dislikes+'%';
-      document.getElementById("barrainferior2").style.width = dislikes+'%';
-
-    } else {
-      //Obtenemos los datos del localStorage
-      let dataHeroe = JSON.parse(localStorage.getItem("superheroe"));
-
-      //Se modifican los likes
-      dataHeroe.dislikes += 1;
+      let item = itemLocalStorage();    
+      item.dislikes += 5;     
+      let dislikes = item.dislikes;  
       
-      //Se sobreescriben los datos
-      localStorage.setItem("superheroe", JSON.stringify(dataHeroe));
+      setItemLocalStorage(item);
+      showHideDislikes(dislikes);
 
-      //Almacenamos los likes en una variable
+    }else {      
+      let dataHeroe = itemLocalStorage();     
+      dataHeroe.dislikes += 5;
+           
+      setItemLocalStorage(dataHeroe);
+     
       let dislike = dataHeroe.dislikes;
-
-      if(dislike < 10){
-        document.getElementById("dislike-porcentaje").style.display = 'none';
-      }else{
-        document.getElementById("dislike-porcentaje").style.display = 'block';
-      }
-
-      document.getElementById("porcentaje2").innerHTML = dislike+'%';
-      document.getElementById("barrainferior2").style.width = dislike+'%';
+      showHideDislikes(dislike);
     }
   }
 
