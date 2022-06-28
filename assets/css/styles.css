@@ -24,13 +24,13 @@
 
 .navbar-dark .navbar-nav .nav-link {
     font-family: 'HelveticaNeueLTStd-Roman';
-    color: white;
+    color: rgb(255, 255, 255);
     letter-spacing: 2pt;
     font-size: 20px;
 }
 
 #header{
-    background-image: url("../images/header_01.jpg") ;   
+    background-image: url("../images/header_02.jpg") ;   
     height: 800px;
     width: 100%;
     background-position: center;
@@ -39,7 +39,7 @@
 }
 
 #positivo{
-    background-image: url("../images/header_01.jpg") ;   
+    background-image: url("../images/header_02.jpg") ;   
     height: 800px;
     width: 100%;
     background-position: center;
@@ -48,7 +48,7 @@
 }
 
 #negativo{
-    background-image: url("../images/header_01.jpg") ;   
+    background-image: url("../images/header_02.jpg") ;   
     height: 800px;
     width: 100%;
     background-position: center;
@@ -239,22 +239,22 @@
 }
 
 .superman{
-    background-image: url('../images/superman.jpg');
+    background-image: url('../images/aatrox.jpg');
     margin-bottom: 20px;
 }
 
 .thor{
-    background-image: url('../images/thor.jpg');
+    background-image: url('../images/tryndamere.jpg');
     margin-bottom: 20px;
 }
 
 .batman{
-    background-image: url('../images/batman.jpg');
+    background-image: url('../images/Evelynn.jpg');
     margin-bottom: 20px;
 }
 
 .spiderman{
-    background-image: url('../images/spiderman.jpg');
+    background-image: url('../images/shen.jpg');
     margin-bottom: 20px;
 }
 
