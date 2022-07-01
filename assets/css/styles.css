@@ -461,4 +461,32 @@ hr{
     #center-div{        
         min-height: 90vh;        
     }   
+              
+    
+    .logo{
+        height: 50px;
+    }
+    .lupa{
+        display: none;
+    }
+} 
+
+@media (max-width: 900px) {
+    #menu{
+        text-align: center;
+    }
+    #navbarSupportedContent > ul > li > a{ 
+        color: rgb(255, 255, 255);
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 360px) {
+    .footer{
+        width: 30%;
+        
+    }
+    #center-div{        
+        min-height: 90vh;        
+    }   
   }

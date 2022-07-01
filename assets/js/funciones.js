@@ -1,8 +1,4 @@
 // Ocultar iconos y divs
-/*document.getElementById("like-porcentaje").style.display = 'none';
-document.getElementById("dislike-porcentaje").style.display = 'none';
-document.getElementById("positivo").style.display = 'none';
-document.getElementById("negativo").style.display = 'none';*/
 
 sinParametro()
 
@@ -161,7 +157,3 @@ function agregarLike() {
       document.getElementById("barrainferior2").style.width = dislike+'%';
     }
   }
-
-
-
-
