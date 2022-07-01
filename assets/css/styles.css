@@ -37,7 +37,7 @@
 
 #header{
     background-image: url("../images/header_02.jpg") ;   
-    height: 1119px;
+    height: 800px;
     width: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -64,7 +64,8 @@
 
 #center-div{
     position: absolute;
-    top: 210px;
+    width: 90%;
+    top: 166px;
     left: 102px;
     /* height: 437px;
     width: 564px; */
@@ -145,7 +146,7 @@
 }
 
 #texto-modal #question {
-    font-size: 13px;
+    font-size: 11px;
     padding: 20px;
 }
 
@@ -432,7 +433,7 @@ hr{
 
 @media (max-width: 500px) {
     #center-div{     
-        left: 0px;             
+        left: 20px;             
     } 
     .logo{
         height: 50px;
@@ -447,8 +448,8 @@ hr{
         text-align: center;
     }
     #navbarSupportedContent > ul > li > a{ 
-        color: black;
-        font-size: 15px;
+        color: rgb(255, 255, 255);
+        font-size: 12px;
     }
 }
 
