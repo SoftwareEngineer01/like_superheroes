@@ -24,13 +24,19 @@
 
 .navbar-dark .navbar-nav .nav-link {
     font-family: 'HelveticaNeueLTStd-Roman';
-    color: white;
-    letter-spacing: 2pt;
-    font-size: 20px;
+    color: rgb(255, 255, 255);
+    letter-spacing: 0pt;
+    font-size: 16px;
 }
 
+.img-fluid {
+    max-width: 70%;
+    height: auto;
+}
+
+
 #header{
-    background-image: url("../images/header_01.jpg") ;   
+    background-image: url("../images/header_02.jpg") ;   
     height: 800px;
     width: 100%;
     background-position: center;
@@ -39,7 +45,7 @@
 }
 
 #positivo{
-    background-image: url("../images/header_01.jpg") ;   
+    background-image: url("../images/header_02.jpg") ;   
     height: 800px;
     width: 100%;
     background-position: center;
@@ -48,7 +54,7 @@
 }
 
 #negativo{
-    background-image: url("../images/header_01.jpg") ;   
+    background-image: url("../images/header_02.jpg") ;   
     height: 800px;
     width: 100%;
     background-position: center;
@@ -58,7 +64,8 @@
 
 #center-div{
     position: absolute;
-    top: 210px;
+    width: 90%;
+    top: 166px;
     left: 102px;
     /* height: 437px;
     width: 564px; */
@@ -83,7 +90,7 @@
     float: left;
     width: 50%;
     min-height: 95px;
-    background-color: #00ADA4;   
+    background-color:#9c7a1a;   
 }
 
 #left2 {    
@@ -93,7 +100,7 @@
     float: left;
     width: 15%;
     min-height: 65px;
-    background-color: #00ADA4;   
+    background-color: #9c7a1a;   
 }
 
   #right {
@@ -103,7 +110,7 @@
     float: right;
     width: 50%;
     min-height: 95px;
-    background-color:#FFAF00;
+    background-color:#fd1c2e;
   }
 
   #right3 {    
@@ -113,7 +120,7 @@
     float: left;
     width: 15%;
     min-height: 65px;
-    background-color: #FFAF00;  
+    background-color: #fd1c2e;  
 }
 
   #right2 {
@@ -139,7 +146,7 @@
 }
 
 #texto-modal #question {
-    font-size: 18px;
+    font-size: 11px;
     padding: 20px;
 }
 
@@ -168,7 +175,7 @@
 }
 
 #barrainferior1{
-    background-color: #00ADA4;
+    background-color: #9c7a1a;
     position:absolute; /*El div será ubicado con relación a la pantalla*/
     left:0px; /*A la derecha deje un espacio de 0px*/
     right:0px; /*A la izquierda deje un espacio de 0px*/
@@ -183,7 +190,7 @@
 }
 
 #barrainferior2{
-    background-color:#FFAF00;
+    background-color:#fd1c2e;
     position:absolute; /*El div será ubicado con relación a la pantalla*/
     
     right:0px; /*A la izquierda deje un espacio de 0px*/
@@ -239,22 +246,22 @@
 }
 
 .superman{
-    background-image: url('../images/superman.jpg');
+    background-image: url('../images/aatrox.jpg');
     margin-bottom: 20px;
 }
 
 .thor{
-    background-image: url('../images/thor.jpg');
+    background-image: url('../images/tryndamere.jpg');
     margin-bottom: 20px;
 }
 
 .batman{
-    background-image: url('../images/batman.jpg');
+    background-image: url('../images/Evelynn.jpg');
     margin-bottom: 20px;
 }
 
 .spiderman{
-    background-image: url('../images/spiderman.jpg');
+    background-image: url('../images/shen.jpg');
     margin-bottom: 20px;
 }
 
@@ -295,7 +302,7 @@
 }
 
 #barrainferior1-card{
-    background-color: #00ADA4;
+    background-color: #9c7a1a;
     position:absolute; /*El div será ubicado con relación a la pantalla*/
     left:0px; /*A la derecha deje un espacio de 0px*/
     width: 45%;
@@ -311,7 +318,7 @@
 }
 
 #barrainferior2-card{
-    background-color:#FFAF00;
+    background-color:#fd1c2e;
     position:absolute; /*El div será ubicado con relación a la pantalla*/
     width: 45%;
     margin-right: 15px;
@@ -327,7 +334,7 @@
 }
 
 .like{
-    background-color: #00ADA4;
+    background-color: #9c7a1a;
    /*El div será ubicado con relación a la pantalla*/
    width: 56px;
    margin-left: -15px;
@@ -397,6 +404,10 @@ hr{
     color: rgb(32, 32, 32);
 }
 
+.fa-instagram:before {
+    color: rgb(32, 32, 32);
+}
+
 .img-2{
     width: 5%;
     display:inline-block;  
@@ -405,10 +416,11 @@ hr{
 
 @media (min-width: 992px){
     .navbar-expand-lg .navbar-collapse {      
-        margin-right: 30px;
+        margin-right: -106px;
     }
     #menu{      
-        margin-left: 85px;
+        margin-left: 78px;
+         margin-right: 204px;
      }
 }
 
@@ -421,7 +433,7 @@ hr{
 
 @media (max-width: 500px) {
     #center-div{     
-        left: 0px;             
+        left: 20px;             
     } 
     .logo{
         height: 50px;
@@ -436,8 +448,36 @@ hr{
         text-align: center;
     }
     #navbarSupportedContent > ul > li > a{ 
-        color: black;
-        font-size: 15px;
+        color: rgb(255, 255, 255);
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 360px) {
+    .footer{
+        width: 30%;
+        
+    }
+    #center-div{        
+        min-height: 90vh;        
+    }   
+              
+    
+    .logo{
+        height: 50px;
+    }
+    .lupa{
+        display: none;
+    }
+} 
+
+@media (max-width: 900px) {
+    #menu{
+        text-align: center;
+    }
+    #navbarSupportedContent > ul > li > a{ 
+        color: rgb(255, 255, 255);
+        font-size: 12px;
     }
 }
 
